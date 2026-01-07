@@ -1,4 +1,4 @@
-ARG REGISTRY_PREFIX="ipull ghcr.io/alf-qmc/alf-container/"
+ARG REGISTRY_PREFIX="ghcr.io/alf-qmc/alf-container/"
 FROM ${REGISTRY_PREFIX}base-imgs/bookworm
 
 ARG YEAR=24
