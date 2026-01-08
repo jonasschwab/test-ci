@@ -53,3 +53,15 @@ jobs:
         run: |
           echo "Free space after:"
           df -h
+  test-mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script on macOS
+        run: |
+          echo Hello from macOS!
+          gfortran --version
+          gcc --version
+          g++ --version
+          make --version
