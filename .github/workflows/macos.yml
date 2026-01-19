@@ -21,3 +21,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - run: pip install pyalf
+      - run: python -c "import py_alf; print('pyalf version:', py_alf.__version__)"
