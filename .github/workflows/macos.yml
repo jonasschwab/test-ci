@@ -21,4 +21,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - run: pip install pyalf pyyaml
+      - run: which -a python
+      - run: which -a python3
+      - run: which -a pip
+      - run: which -a pip3
       - run: python3 -c "import yaml"
