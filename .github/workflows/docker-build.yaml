@@ -38,21 +38,6 @@ jobs:
       - name: Get number of processors
         run: nproc
 
-      # - name: Maximize build space
-      #   uses: easimon/maximize-build-space@master
-      #   with:
-      #     root-reserve-mb: 512
-      #     swap-size-mb: 1024
-      #     remove-dotnet: 'true'
-
-      - name: Build Docker image
-        run: |
-          docker build -t my-image:latest bookworm-pgi-24-09 || df -h
-
-      - name: Free space after
-        run: |
-          echo "Free space after:"
-          df -h
   test-mac:
     runs-on: macos-latest
     steps:
