@@ -1,4 +1,4 @@
-name: Test checkout
+name: Test ubuntu-slim
 
 on:
   push:
@@ -6,11 +6,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_docs:
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/alf-qmc/alf-container/pyalf-doc/jupyter
+  test_ubuntu_slim:
+    runs-on: ubuntu-slim
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - run: ls -lah
+      - run: pip install pylint
+      - run: pylint --version
+      - run: pylint --help
