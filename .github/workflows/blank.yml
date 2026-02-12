@@ -12,3 +12,7 @@ jobs:
       - run: pip install pylint
       - run: pylint --version
       - run: pylint --help
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+      - run: uv --version
+      - run: uv --help
